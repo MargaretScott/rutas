@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.producto {
+  width: calc(33.333% - 20px);
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+}
+
+.listadoproductos {
+  list-style: none;
+  background-color: lightsalmon;
+}
+footer {
+  margin-left: 200px;
+  margin-top: 50px;
+  color: orangered;
+  font-weight: 1000;
+}

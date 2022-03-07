@@ -1,0 +1,20 @@
+<div class=" container-card mt-4">
+  <h1 >Productos</h1>
+  <div class="productos"> 
+    <div *ngFor="let producto of productos" class="producto">
+      <div >
+        <h5>PRODUCTO: {{producto.title}}</h5>
+      </div>
+      <ul class="listadoproductos">
+        <li>id: {{producto.id}}</li>
+        <li>Price: {{producto.price}}</li>
+        <li>Stock: {{producto.stock}}</li>
+      </ul>
+      
+    </div>
+  
+  </div> 
+  <footer>    Born To Code Wild     
+    <img src="https://i.pinimg.com/originals/3c/49/8b/3c498bab16e5600f14f5619af0e8a2d2.jpg"alt="">Feliz Cumple Profe!!!
+  </footer>
+  
