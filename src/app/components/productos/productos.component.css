@@ -14,7 +14,11 @@
   padding: 10px;
   margin: 10px;
 }
-
+.btn-colorette {
+  color: #fff;
+  background-color: #c5164b;
+  border-color: #292129;
+}
 .listadoproductos {
   list-style: none;
   background-color: lightsalmon;

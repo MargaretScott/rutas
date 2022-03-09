@@ -1,0 +1,12 @@
+<div class="card border-0 shadow my-2 p-3">
+  <h3 class="card-title">{{miProducto.title}}</h3>
+  <ul class="card-content">
+    <li>Precio: {{miProducto.price}}</li>
+    <li>Stock: {{miProducto.stock}}</li>
+  </ul>
+  <button class="btn btn-colorcito" [routerLink]="['/producto', miProducto.id]">Ver detalle</button>
+  <div class="d-flex justify-content-between">
+    <button class="btn btn-success" [routerLink] ="['actualiar-producto',miProducto.id]">Actualizar</button>
+    <button class="btn btn-danger" (click)="borrarProducto(miProducto.id)">Borrar</button>
+  </div>
+</div>

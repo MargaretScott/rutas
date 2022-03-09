@@ -1,31 +1,34 @@
 <header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" [routerLink]="[ '/home' ]">Rutas</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" [routerLink]="[ '/home' ]">Home</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="[ '/contacto' ]">Contacto</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="[ '/productos' ]">Productos</a>
-          </li>
-
-        </ul>
-      </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-colorin">
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink]="[ '/home' ]">My Bakery</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <!--  routerLinkActivate marca con la clase de css que designemos el estado activo del boton cuando estamos en esa sección
+            routerLinkActive aplica la clase correspondiente al boton cuando la ruta se cumple-->
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" routerLinkActive="active" [routerLink]="[ '/home' ]">Home</a>
+        </li>
+  
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="[ '/contacto' ]">Contacto</a>
+        </li>
+  
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="[ '/productos' ]">Productos</a>
+        </li>
+    
+      </ul>
     </div>
+  </div>
   </nav>
 </header>
 <main>
   <router-outlet></router-outlet>
 </main>
+>
+<footer class="footer bg-colorin text-light p-2 fixed.bottom">Made with love by Margaret Scott Copyright @ 2022 </footer>

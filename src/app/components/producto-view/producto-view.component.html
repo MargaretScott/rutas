@@ -1,0 +1,6 @@
+<div class="container card mt-4">
+  <h1>{{producto.id}} - {{producto.title}}</h1>
+  <p>Precio: <strong>{{producto.price}} €</strong></p>
+  <p>Stock: <strong>{{(producto.stock) ? 'SI TENEMOS STOCK' : 'NO TENEMOS STOCK'}}</strong></p>
+</div>
+<a [routerLink]="['/productos']" class="link">Volver a la lista</a>

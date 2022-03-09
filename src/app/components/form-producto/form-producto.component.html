@@ -1,0 +1,30 @@
+<!-- quiero pintar un formulario de tipo model, sin validaciones.
+¿que necesitamos importar para usar estos formularios?
+¿Como se monta el formulario?
+-->
+<div class="container my-4">
+  <h1>Formulario</h1>
+  <hr>
+  <form [formGroup]="registroProducto" (ngSubmit)="recogerDatosForm()">
+    <div>
+      <label class="form-label" for="title">Titulo de producto</label>
+      <input class="form-control" type="text" formControlName="title" placeholder="introduce un titulo de producto">
+    </div>
+
+    <div>
+      <label class="form-label" for="price">Precio</label>
+      <input class="form-control" type="number" min="0" formControlName="price"
+        placeholder="introduce un precio de producto">
+    </div>
+
+    <div>
+      <select class="form-select mt-3" formControlName="stock">
+        <option value="">Selecciona una opción</option>
+        <option value="false">Sin stock</option>
+        <option value="true">Con stock</option>
+      </select>
+    </div>
+
+    <input class="btn btn-warning mt-3" type="submit" value="Guardar">
+  </form>
+</div>

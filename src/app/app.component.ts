@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Producto } from './interfaces/productos.interface';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +6,7 @@ import { Producto } from './interfaces/productos.interface';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  productos: Producto[] = [];
-  prodcutos: string = "";
 
-  ngOnInit(): void {
-
+title='rutas'
   }
-}
+

@@ -2,9 +2,6 @@ import { Component,  OnInit } from '@angular/core';
 import { Producto } from 'src/app/interfaces/productos.interface';
 import { productosService } from 'src/app/services/productos.service';
 
-
-
-
 @Component({
   selector: 'app-productos',
   templateUrl: './productos.component.html',
@@ -13,12 +10,16 @@ import { productosService } from 'src/app/services/productos.service';
 export class ProductosComponent implements OnInit {
   
   productos: Producto[] = [];
-  constructor(private productodeservicio: productosService) { }
+  constructor(private productosService: productosService) { }
 
   ngOnInit(): void {
-    this.productos = this.productodeservicio.getAll();
-    // console.log(this.productos)
+    this.productos = this.productosService.getAll();
+   // this.productos = this.productosServices.getByStock();
+  // console.log(this.productos)
   }
 
+  ngDoCheck() {
+    this.productos = this.productosService.getAll();
+  }
 
 }

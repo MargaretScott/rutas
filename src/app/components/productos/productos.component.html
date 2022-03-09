@@ -1,19 +1,14 @@
-<div class=" container-card mt-4">
-  <h1 >Productos</h1>
-  <div class="productos"> 
-    <div *ngFor="let producto of productos" class="producto">
-      <div >
-        <h5>PRODUCTO: {{producto.title}}</h5>
-      </div>
-      <ul class="listadoproductos">
-        <li>id: {{producto.id}}</li>
-        <li>Price: {{producto.price}}</li>
-        <li>Stock: {{producto.stock}}</li>
-      </ul>
-      
-    </div>
-  
-  </div> 
+<div class="container card mt-4">
+  <div class="d-flex justify-content-lg-between p-3">
+    <h1>Productos</h1>
+    <button class="btn btn-warning" [routerLink]="['/nuevo-producto']">Nuevo producto</button>
+  </div>
+  <section class="row">
+    <article class="col_12 col-md-6 col-lg-4" *ngFor="let producto of productos">
+      <app-producto-card [miProducto]="producto"></app-producto-card>
+    </article>
+  </section>
+</div>
   <footer>    Born To Code Wild     
     <img src="https://i.pinimg.com/originals/3c/49/8b/3c498bab16e5600f14f5619af0e8a2d2.jpg"alt="">Feliz Cumple Profe!!!
   </footer>
